@@ -3,8 +3,8 @@ function medianScore(students) {
   const midpoint = Math.floor(sortedList.length / 2);
   const medianScore =
     students.length % 2
-      ? (sortedList[midpoint].score + sortedList[midpoint - 1].score) / 2
-      : sortedList[midpoint].score;
+      ? sortedList[midpoint].score
+      : (sortedList[midpoint].score + sortedList[midpoint - 1].score) / 2.0;
   return medianScore;
 }
 
