@@ -1,8 +1,11 @@
 function medianScore(students) {
   const sortedList = students.sort((a, b) => a.score - b.score);
   const midpoint = Math.floor(sortedList.length / 2);
-
-  return sortedList[midpoint].score;
+  const medianScore =
+    students.length % 2
+      ? (sortedList[midpoint].score + sortedList[midpoint - 1].score) / 2
+      : sortedList[midpoint].score;
+  return medianScore;
 }
 
 function topScoringStudent(students) {
